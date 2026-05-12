@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <!-- Entity Framework Core + SQLite -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <!-- xUnit tests -->
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <!-- Images as embedded resources so pack:// URI works -->
+  <ItemGroup>
+    <Resource Include="Resources\Images\parking_lot_1.jpg" />
+    <Resource Include="Resources\Images\parking_lot_2.jpg" />
+    <Resource Include="Resources\Images\parking_lot_3.jpg" />
+    <Resource Include="Resources\Images\parking_lot_4.JPG" />
+    <Resource Include="Resources\Images\parking_lot_5.jpg" />
+    <Resource Include="Resources\Images\parking_lot_6.jpg" />
+    <Resource Include="Resources\Images\parking_lot_7.jpeg" />
+    <Resource Include="Resources\Images\parking_lot_8.jpeg" />
+    <Resource Include="Resources\Images\parking_lot_9.jpg" />
+    <Resource Include="Resources\Images\parking_lot_10.jpg" />
+  </ItemGroup>
+
+</Project>

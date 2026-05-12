@@ -1,0 +1,144 @@
+﻿<Page x:Class="ParkingApp.Views.AdminStatisticsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Background="#1A1A1A">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="24">
+        <StackPanel>
+            <TextBlock Text="Статистика"
+                       FontSize="22" FontWeight="Bold"
+                       Foreground="White"
+                       Margin="0,0,0,24"/>
+
+            <!-- Today stats row -->
+            <TextBlock Text="СЬОГОДНІ"
+                       FontSize="11" FontWeight="Bold"
+                       Foreground="#666666"
+                       Margin="0,0,0,12"/>
+            <WrapPanel Margin="0,0,0,28">
+                <!-- Bookings today -->
+                <Border Background="#222222"
+                        CornerRadius="16"
+                        Width="200" Height="120"
+                        Margin="0,0,12,12">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="📋" FontSize="28" TextAlignment="Center" Margin="0,0,0,8"/>
+                        <TextBlock x:Name="TodayBookingsText"
+                                   Text="0"
+                                   FontSize="32" FontWeight="Bold"
+                                   Foreground="#FFD700"
+                                   TextAlignment="Center"/>
+                        <TextBlock Text="бронювань"
+                                   FontSize="12"
+                                   Foreground="#888888"
+                                   TextAlignment="Center"
+                                   Margin="0,4,0,0"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Revenue today -->
+                <Border Background="#222222"
+                        CornerRadius="16"
+                        Width="200" Height="120"
+                        Margin="0,0,12,12">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="💰" FontSize="28" TextAlignment="Center" Margin="0,0,0,8"/>
+                        <TextBlock x:Name="TodayRevenueText"
+                                   Text="0 грн"
+                                   FontSize="22" FontWeight="Bold"
+                                   Foreground="#4CAF50"
+                                   TextAlignment="Center"/>
+                        <TextBlock Text="дохід"
+                                   FontSize="12"
+                                   Foreground="#888888"
+                                   TextAlignment="Center"
+                                   Margin="0,4,0,0"/>
+                    </StackPanel>
+                </Border>
+            </WrapPanel>
+
+            <!-- Week stats row -->
+            <TextBlock Text="ЦЬОГО ТИЖНЯ"
+                       FontSize="11" FontWeight="Bold"
+                       Foreground="#666666"
+                       Margin="0,0,0,12"/>
+            <WrapPanel Margin="0,0,0,28">
+                <!-- Week revenue -->
+                <Border Background="#222222"
+                        CornerRadius="16"
+                        Width="200" Height="120"
+                        Margin="0,0,12,12">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="📈" FontSize="28" TextAlignment="Center" Margin="0,0,0,8"/>
+                        <TextBlock x:Name="WeekRevenueText"
+                                   Text="0 грн"
+                                   FontSize="22" FontWeight="Bold"
+                                   Foreground="#4CAF50"
+                                   TextAlignment="Center"/>
+                        <TextBlock Text="загальний дохід"
+                                   FontSize="12"
+                                   Foreground="#888888"
+                                   TextAlignment="Center"
+                                   Margin="0,4,0,0"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Total bookings -->
+                <Border Background="#222222"
+                        CornerRadius="16"
+                        Width="200" Height="120"
+                        Margin="0,0,12,12">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="🗂️" FontSize="28" TextAlignment="Center" Margin="0,0,0,8"/>
+                        <TextBlock x:Name="TotalBookingsText"
+                                   Text="0"
+                                   FontSize="32" FontWeight="Bold"
+                                   Foreground="#FFD700"
+                                   TextAlignment="Center"/>
+                        <TextBlock Text="всього бронювань"
+                                   FontSize="12"
+                                   Foreground="#888888"
+                                   TextAlignment="Center"
+                                   Margin="0,4,0,0"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Total users -->
+                <Border Background="#222222"
+                        CornerRadius="16"
+                        Width="200" Height="120"
+                        Margin="0,0,12,12">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="👥" FontSize="28" TextAlignment="Center" Margin="0,0,0,8"/>
+                        <TextBlock x:Name="TotalUsersText"
+                                   Text="0"
+                                   FontSize="32" FontWeight="Bold"
+                                   Foreground="#64B5F6"
+                                   TextAlignment="Center"/>
+                        <TextBlock Text="користувачів"
+                                   FontSize="12"
+                                   Foreground="#888888"
+                                   TextAlignment="Center"
+                                   Margin="0,4,0,0"/>
+                    </StackPanel>
+                </Border>
+            </WrapPanel>
+
+            <!-- Parkings overview -->
+            <TextBlock Text="ПАРКІНГИ"
+                       FontSize="11" FontWeight="Bold"
+                       Foreground="#666666"
+                       Margin="0,0,0,12"/>
+            <Border Background="#222222"
+                    CornerRadius="16"
+                    Padding="20"
+                    Margin="0,0,0,12">
+                <StackPanel>
+                    <TextBlock x:Name="ParkingsSummaryText"
+                               Foreground="#AAAAAA"
+                               FontSize="13"
+                               TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
